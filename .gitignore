@@ -9,7 +9,7 @@ Thumbs.db
 .sass-cache
 .env
 .cache
-.code-workspace
+*.code-workspace
 
 # Node modules and output
 node_modules
