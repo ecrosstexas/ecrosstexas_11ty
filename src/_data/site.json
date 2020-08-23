@@ -1,0 +1,14 @@
+{
+  "showThemeCredit": true,
+  "url": "https://ecrosstexas.com",
+  "name": "ecrosstexas",
+  "shortDesc": "My blog, creations, notes, photos, and more. It's a digital garden, a commonplace book, a modern day cabinet of curiosities.",
+  "authorName": "Eric Wallace", 
+  "authorEmail": "eric@ecrosstexas.com",
+  "authorHandle": "@ecrosstexas",
+  "authorLocation": "Plano, Texas, USA",
+  "enableThirdPartyComments": false,
+  "maxPostsPerPage": 5,
+  "paymentPointer": "",
+  "faviconPath": "/images/favicon.png"
+}

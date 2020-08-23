@@ -1,0 +1,38 @@
+{
+  "name": "ecrosstexas_11ty",
+  "version": "1.0.0",
+  "description": "Eleventy-powered version of my personal website ecrosstexas.com",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx gulp && concurrently 'npx gulp watch' 'npx eleventy --serve'",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecrosstexas/ecrosstexas_11ty.git"
+  },
+  "keywords": [],
+  "author": "Eric Wallace @ecrosstexas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecrosstexas/ecrosstexas_11ty/issues"
+  },
+  "homepage": "https://github.com/ecrosstexas/ecrosstexas_11ty#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-cache-assets": "^2.0.2",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "get-google-fonts": "^1.2.2",
+    "gorko": "^0.2.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "html-minifier": "^4.0.0",
+    "moment": "^2.26.0",
+    "sass": "^1.26.8",
+    "twitter": "^1.7.1"
+  }
+}
