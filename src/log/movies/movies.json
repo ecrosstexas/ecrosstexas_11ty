@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/movies.njk",
+    "permalink": "/log/movies/{{ slug }}/index.html"
+  }
+  

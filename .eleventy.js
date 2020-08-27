@@ -13,6 +13,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 module.exports = config => {
+  // Set directories to pass through to the dist folder
+  config.addPassthroughCopy('./src/images/');
+  config.addPassthroughCopy({'./src/_assets/*.*': "/" });
+
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
@@ -42,7 +46,22 @@ module.exports = config => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
   });
 
-  // Returns a list of people ordered by filename
+    // Returns a collection of sports memories in reverse date order
+    config.addCollection('sports', collection => {
+      return [...collection.getFilteredByGlob('./src/log/sports/*.md')].reverse();
+    });
+
+    // Returns a collection of movies in reverse date order
+    config.addCollection('movies', collection => {
+      return [...collection.getFilteredByGlob('./src/log/movies/*.md')].reverse();
+    });
+
+    // Returns a collection of places in reverse date order
+    config.addCollection('places', collection => {
+      return [...collection.getFilteredByGlob('./src/log/places/*.md')].reverse();
+    });
+
+    // Returns a list of people ordered by filename
   config.addCollection('people', collection => {
     return collection.getFilteredByGlob('./src/people/*.md').sort((a, b) => {
       return Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1;
@@ -68,6 +87,7 @@ module.exports = config => {
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
+
 
   return {
     markdownTemplateEngine: 'njk',

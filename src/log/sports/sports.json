@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/sports.njk",
+    "permalink": "/log/sports/{{ slug }}/index.html"
+  }
+  

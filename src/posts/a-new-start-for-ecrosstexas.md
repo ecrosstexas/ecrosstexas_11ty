@@ -1,6 +1,6 @@
 ---
-title: A new start for ecrosstexas.com
-date: 2020-08-18T12:01
+title: A new start
+date: 2020-08-23T12:01
 tags: ['site news', '100DaysofCode']
 ---
 
